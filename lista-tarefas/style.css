@@ -5,6 +5,8 @@
 
 body{
     background-color: #f4dad9;
+    max-width: 400px;
+    margin: 0 auto;
 
 }
 
@@ -22,5 +24,6 @@ input{
 button{
     border: none;
     border-radius: 5px;
-    background-color: white;
+    background-color: #a25133;
+    color: white
 }
