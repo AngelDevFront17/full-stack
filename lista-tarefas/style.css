@@ -11,7 +11,8 @@ body{
 }
 
 h1{
-    color: #a25133;
+    margin: 35px;
+    color: #5f2712;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -19,12 +20,26 @@ h1{
 input{
     border: 2px solid #a25133;
     border-radius: 5px;
+    width: 250px;
+    padding: 10px;
 }
 
 button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: none;
     border-radius: 5px;
+    width: 90px;
+    padding: 10px;
+    cursor: pointer;
     background-color: #a25133;
     color: white
     
+}
+
+button:hover{
+    background-color: #6e2308;
+}
+
+button:active{
+    padding: 15px;
 }
