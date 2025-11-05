@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test2</title>
     <!-- Css no mesmo arquivo -->
     <style>
-        body{
+        body {
             background-color: blue;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .container{
+        .container {
             border: 3px solid rgb(250, 248, 248);
             max-width: 500px;
             /*centralizar*/
@@ -23,32 +24,32 @@
 
         }
 
-        .titulo{
+        .titulo {
             color: #66a3ff;
             font-size: 30px;
         }
 
-        .texto{
+        .texto {
             color: white;
             font-size: 35px;
         }
 
-        .time{
+        .time {
             color: rgb(228, 208, 183);
             font-size: 15px;
         }
 
-        .nome{
+        .nome {
             color: rgb(4, 255, 255);
             font-size: 15px;
         }
 
-        .estudo{
+        .estudo {
             color: azure;
             font-size: 15px;
         }
 
-        .negrito{
+        .negrito {
             /*centralizar*/
             text-align: center;
             /*bloco*/
@@ -59,7 +60,7 @@
             color: white;
         }
 
-        .nome2{
+        .nome2 {
             text-align: center;
             display: block;
             border: #0bfdf1 2px solid;
@@ -67,7 +68,7 @@
             color: rgb(247, 238, 209);
         }
 
-        .nome3{
+        .nome3 {
             text-align: center;
             display: block;
             border: #fff 2px solid;
@@ -75,12 +76,12 @@
             color: rgb(176, 252, 227);
         }
 
-        .imgDev{
+        .imgDev {
             border: 2px dotted rgb(148, 87, 148);
             margin: 20px;
         }
 
-        p{
+        p {
             font-family: monospace;
             font-size: 30px;
             background-color: azure;
@@ -92,22 +93,24 @@
             animation: animaTexto steps(13) 2s;
         }
 
-        @keyframes animaMarcador{
-            50%{
+        @keyframes animaMarcador {
+            50% {
                 border-right: transparent;
             }
         }
 
-        @keyframes animaTexto{
-            0%{
+        @keyframes animaTexto {
+            0% {
                 width: 0;
             }
         }
 
-        
-
+        [transition-style="out:circle:hesitate"] {
+            animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-hesitate both;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1 class="titulo">Test 2</h1>
@@ -119,10 +122,11 @@
         <span class="nome2">Angélica</span>
         <small class="nome3">Olá</small>
         <br>
-        <img src="./img/505-350x200.jpg" class="imgDev"/>
+        <img src="./img/505-350x200.jpg" class="imgDev" />
     </div>
 
     <p>Hello, world!</p>
-    
+
 </body>
+
 </html>
