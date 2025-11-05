@@ -4,8 +4,11 @@
 }
 
 body{
-    background-color: #07063d;
-   
+    /*no-repeat é utilizado para que a imagem não se repita varias vezes*/
+    background: url('../img/bg-site.jpg') no-repeat;
+    /*cover, para que a imagem ocupe a tela toda*/
+    background-size: cover;
+
 
 }
 
@@ -29,8 +32,8 @@ body{
 }
 
 #tarefa{
-    border: 2px solid #5321c7;
-    color: rgb(18, 85, 85);
+    border: 2px solid #2185c7;
+    color: rgb(105, 8, 129);
     outline: none;
     border-radius: 5px;
     width: 250px;
@@ -41,20 +44,20 @@ body{
     color: silver;
 }
 
-button{
+.btn-adicionar{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: none;
     border-radius: 5px;
     width: 90px;
     padding: 10px;
     cursor: pointer;
-    background-color: #493ee2;
+    background-color: #081b6e;
     color: white
     
 }
 
 button:hover{
-    background-color: #081b6e;
+    background-color: #983ee2;
 }
 
 button:active{
