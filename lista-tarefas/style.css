@@ -43,3 +43,18 @@ button:hover{
 button:active{
     padding: 15px;
 }
+
+ul{
+    list-style-type: none;
+    padding: 0;
+
+}
+
+li{
+    background-color: #5f2712;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    color: white;
+
+}

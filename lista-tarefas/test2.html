@@ -80,6 +80,32 @@
             margin: 20px;
         }
 
+        p{
+            font-family: monospace;
+            font-size: 30px;
+            background-color: azure;
+            border-right: 4px solid;
+            white-space: nowrap;
+            width: 13ch;
+            overflow: hidden;
+
+            animation: animaTexto steps(13) 2s;
+        }
+
+        @keyframes animaMarcador{
+            50%{
+                border-right: transparent;
+            }
+        }
+
+        @keyframes animaTexto{
+            0%{
+                width: 0;
+            }
+        }
+
+        
+
     </style>
 </head>
 <body>
@@ -87,14 +113,16 @@
         <h1 class="titulo">Test 2</h1>
         <h2 class="texto">olá mundo</h2>
         <h3 class="time">São Paulo</h3>
-        <h4 class="nome">Gustavo</h4>
+        <h4 class="nome">Senai</h4>
         <h5 class="estudo">Dev</h5>
         <strong class="negrito">Negrito</strong>
         <span class="nome2">Angélica</span>
-        <small class="nome3">Isabella</small>
+        <small class="nome3">Olá</small>
         <br>
         <img src="./img/505-350x200.jpg" class="imgDev"/>
     </div>
+
+    <p>Hello, world!</p>
     
 </body>
 </html>
