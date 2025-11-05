@@ -64,6 +64,18 @@ button:active{
     padding: 15px;
 }
 
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    color: #400d69;
+    padding: 8px;
+
+}
+
+a:active{
+    color: #983ee2;
+}
+
 ul{
     list-style-type: none;
     padding: 0;
