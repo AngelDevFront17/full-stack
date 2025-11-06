@@ -67,13 +67,14 @@ button:active{
 a{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 14px;
-    color: #400d69;
+    text-decoration: none;
+    text-align: right;
+    color: #a558e0;
     padding: 8px;
-
 }
 
 a:active{
-    color: #983ee2;
+    color: #3f0b69;
 }
 
 ul{
