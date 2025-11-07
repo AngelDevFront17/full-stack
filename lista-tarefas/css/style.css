@@ -5,7 +5,7 @@
 
 body{
     /*no-repeat é utilizado para que a imagem não se repita varias vezes*/
-    background: url('../img/bg-site.jpg') no-repeat;
+    background: url('../img/Ipê.jpg') no-repeat;
     /*cover, para que a imagem ocupe a tela toda*/
     background-size: cover;
 
@@ -26,13 +26,17 @@ body{
 
 .container h1{
     margin: 35px;
-    color: #250381;
+    color: rgb(245, 141, 228);
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.navbar{
+    background-color: rgb(59, 97, 35);
+}
+
 #tarefa{
-    border: 2px solid #2185c7;
+    border: 2px solid rgb(173, 16, 147);
     color: rgb(105, 8, 129);
     outline: none;
     border-radius: 5px;
@@ -51,24 +55,24 @@ body{
     width: 90px;
     padding: 10px;
     cursor: pointer;
-    background-color: #081b6e;
+    background-color: rgb(173, 16, 147);
     color: white
     
 }
 
 button:hover{
-    background-color: #983ee2;
+    background-color: #8b0385;
 }
 
 button:active{
     padding: 15px;
 }
 
-a{
+.navbar a{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 14px;
     text-decoration: none;
-    color: #a558e0;
+    color: white;
     padding: 25px;
 }
 
