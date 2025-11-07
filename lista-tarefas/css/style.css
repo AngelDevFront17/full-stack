@@ -68,9 +68,8 @@ a{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 14px;
     text-decoration: none;
-    text-align: right;
     color: #a558e0;
-    padding: 8px;
+    padding: 25px;
 }
 
 a:active{
