@@ -14,5 +14,5 @@ exemplo:
 
 
 for(let i = 1; i <= 10; i++){
-    console.log('10 * = ' + (10 * i)) //poderia colocar $(i*10)
+    console.log('10 * = ' i + (10 * i)) //poderia colocar $(i*10)
 }
