@@ -1,5 +1,5 @@
 body {
-    background: #f1f3f5;
+    background: #a3a4a5;
     padding: 30px;
 }
 
@@ -59,11 +59,11 @@ input:focus {
     outline: none;
 }
 
-button {
+.button {
     width: 100%;
     margin-top: 10px;
     padding: 12px;
-    background: #4c6ef5;
+    background: #a81251;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -74,7 +74,7 @@ button {
 }
 
 .button:hover {
-    background: #850a3d;
+    background: #4e0926;
 }
 
 /* LISTA DE CONTATOS */
