@@ -59,7 +59,7 @@ input:focus {
     outline: none;
 }
 
-.button {
+button {
     width: 100%;
     margin-top: 10px;
     padding: 12px;
@@ -73,7 +73,7 @@ input:focus {
     font-weight: bold;
 }
 
-.button:hover {
+button:hover {
     background: #4e0926;
 }
 
