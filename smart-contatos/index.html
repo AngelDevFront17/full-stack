@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,41 +7,43 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
 </head>
-
 <body>
     <main class="container">
-        <h1 class="h1">Cadastro de Contatos</h1>
+        <h1>Cadastro de Contatos</h1>
 
         <form class="form">
             <section class="group">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" placeholder="Digite seu nome" />
+                <input type="text" id="nome" placeholder="Digite seu nome..." />
             </section>
 
             <section class="group">
                 <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Digite seu email" />
+                <input type="text" id="email" placeholder="Digite seu email..."  />
             </section>
 
             <section class="group">
                 <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" placeholder="Digite seu telefone" />
+                <input type="tel" id="telefone" placeholder="Digite seu telefone..."  />
             </section>
 
-            <h2 class="h2">Lista de contatos</h2>
+            <button type="submit">Cadastrar</button>
+        </form>
 
-            <ul class="lista">
-                <!--A lista irá aparecer futuramente com o Js-->
-                <li>A lista aparecerá aqui... </li>
-            </ul> 
+        <h2 class="h2">Lista de Contatos</h2>
 
-            <button class="button" onclick="btnCadastrar(event)">Cadastrar</button>
-        </form> 
-
+        <ul class="lista">
+            <!-- Aqui a lista vai aparecer (Futuramente com JS) -->
+            <li>A lista aparecerá aqui...</li>
+            
+        </ul>
 
     </main>
-
-<script src="./js/script.js"></script>
+    
+    <script src="./js/script.js"></script>
 </body>
-
 </html>
+
+
+
+
