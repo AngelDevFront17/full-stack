@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+//middleware para servir arquivos estáticos
+app.use(express.static('public'));
+
 //variável com os dados produtos
 const produtos = [
     {id: 1, nome: 'Produto A', preco: 100},
