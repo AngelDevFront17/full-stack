@@ -9,6 +9,13 @@ const produtos = [
     {id: 3, nome: 'Produto C', preco: 200},
 ];
 
+//variavel de times
+const times = [
+    {id: 1, nome: 'Santos', ano: 1912},
+    {id: 2, nome: 'Mirasol', ano: 1910},
+    {id: 2, nome: 'Bangu', ano: 1904}
+];
+
 //criar função
 //rota principal
 
@@ -16,16 +23,21 @@ app.get('/', (req, res) => {
     res.send('Bem vindo ao servidor Node.js')
 });
 
-//rota produtos
+//Rota Produtos
 app.get('/produtos', (req, res) => {
     res.send(produtos);
 })
 
-//rota home
+//Rota Home
 app.get('/home', (req, res) =>{
     //console.log("olá: ", __dirname)
     res.sendFile(__dirname + '/public/home.html');
 });
+
+//Rota Times
+app.get('/times', (req, res) =>{
+    res.send(times);
+})
 
 //executando o servidor
 app.listen(port, () => {
