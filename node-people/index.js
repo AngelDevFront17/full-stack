@@ -11,6 +11,16 @@ const nomes = [
   { id: 5, nome: "Doris", idade: "33" },
 ];
 
+//Criando funções auxiliares
+//Retornar o objeto por ID
+function buscarNomesPorId(id){
+    return nomes.filter((nome) => nome.id == id)
+}
+
+//rota com /
+app.get("/", (req, res) => {
+    res.send('Bem vindo! 😁')
+})
 
 //Rota teste
 app.get("/teste", (req,res) => {
@@ -22,6 +32,15 @@ app.get("/listaNomes", (req,res) => {
     res.send(nomes)
 
 })
+
+//Buscando pot ID
+app.get("/listaNomes/:id", (req, res) => {
+    let index = req.params.id;
+
+    res.json(buscarNomesPorId(index))
+})
+
+
 
 app.listen(PORT, () => {
     console.log(`servidor rodando no endereço http://localhost:${PORT}`);
