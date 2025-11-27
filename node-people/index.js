@@ -45,12 +45,20 @@ app.get("/listaNomes/:id", (req, res) => {
     res.json(buscarNomesPorId(index))
 })
 
+//Criando POST para cadastrar
+app.post("/listaNomes", (req, res) => {
+    nomes.push(req.body);
+    res.status(201).send('Nomes cadastrados com sucesso!')
+})
+
 //Criando rota excluir
 app.delete("/listaNomes/:id", (req, res) => {
     let index = buscarIdNomes(req.params.id)
     nomes.splice(index, 1);
     res.send(`Nomes com id ${req.params.id} excluida com sucesso!`)
 })
+
+
 
 
 
