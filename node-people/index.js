@@ -11,6 +11,44 @@ const nomes = [
   { id: 5, nome: "Doris", idade: "33" },
 ];
 
+const times = [
+  { id: 1, nome: "Corinthians", estado: "SP", titulos: 7 },
+  { id: 2, nome: "Palmeiras", estado: "SP", titulos: 11 },
+  { id: 3, nome: "Santos", estado: "SP", titulos: 8 },
+  { id: 4, nome: "Flamengo", estado: "RJ", titulos: 7 },
+  { id: 5, nome: "Vasco", estado: "RJ", titulos: 4 },
+  { id: 6, nome: "Atlético Mineiro", estado: "MG", titulos: 3 },
+  { id: 7, nome: "Cruzeiro", estado: "MG", titulos: 4 },
+];
+
+//lista de Times
+app.get("/times", (req, res) => {
+    res.send(times)
+})
+
+//Pegar time por ID
+function encontrarTimeId(id){
+    return times.filter((times) => times.id == id)
+    
+}
+
+app.get("/times/:id", (req, res) => {
+    let index = req.params.id;
+
+    res.json(encontrarTimeId(index))
+})
+
+//Incluindo Time com o POST
+app.post("/times", (req, res) => {
+    times.push(req.body)
+
+    res.status(201).send(`Time adicionado com sucesso`)
+})
+
+
+//Indicar para express ler body com json
+app.use(express.json())
+
 //Criando funções auxiliares
 //Retornar o objeto por ID
 function buscarNomesPorId(id){
@@ -49,17 +87,14 @@ app.get("/listaNomes/:id", (req, res) => {
 app.post("/listaNomes", (req, res) => {
     nomes.push(req.body);
     res.status(201).send('Nomes cadastrados com sucesso!')
-})
+}) //necessário liberar para ser adicionado express ler body com json ☝️
 
 //Criando rota excluir
 app.delete("/listaNomes/:id", (req, res) => {
     let index = buscarIdNomes(req.params.id)
     nomes.splice(index, 1);
     res.send(`Nomes com id ${req.params.id} excluida com sucesso!`)
-})
-
-
-
+}) 
 
 
 app.listen(PORT, () => {
