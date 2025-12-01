@@ -21,16 +21,21 @@ const times = [
   { id: 7, nome: "Cruzeiro", estado: "MG", titulos: 4 },
 ];
 
+//Pegar time por ID
+function encontrarTimeId(id){
+    return times.filter((time) => time.id == id)
+    
+}
+
+function buscarTimeId(id){
+    return times.findIndex((time) => time.id == id)
+}
+
 //lista de Times
 app.get("/times", (req, res) => {
     res.send(times)
 })
 
-//Pegar time por ID
-function encontrarTimeId(id){
-    return times.filter((times) => times.id == id)
-    
-}
 
 app.get("/times/:id", (req, res) => {
     let index = req.params.id;
@@ -44,6 +49,27 @@ app.post("/times", (req, res) => {
 
     res.status(201).send(`Time adicionado com sucesso`)
 })
+
+app.use(express.json())
+
+//deletar time
+app.delete("/times/:id", (req, res) => {
+let Index = excluirIdTimes(req.params.id)
+times.splice(Index, 1);
+res.send(`Time com id ${req.params.id} excluído com sucesso!`)
+})
+
+// alterar id
+app.put("/times/:id", (req, res) => {
+  let index = buscarTimeId(req.params.id);
+  times[index].nome = req.body.nome;
+  times[index].estado = req.body.estado;
+  times[index].titulos = req.body.titulos;
+
+  res.json(times);
+});
+
+
 
 
 //Indicar para express ler body com json
@@ -95,6 +121,15 @@ app.delete("/listaNomes/:id", (req, res) => {
     nomes.splice(index, 1);
     res.send(`Nomes com id ${req.params.id} excluida com sucesso!`)
 }) 
+
+// alterar id
+app.put("/listaNomes/:id", (req, res) => {
+  let index = buscarIdNomes(req.params.id);
+  nomes[index].nome = req.body.nome;
+  nomes[index].idade = req.body.idade;
+
+  res.json(nomes);
+});
 
 
 app.listen(PORT, () => {
