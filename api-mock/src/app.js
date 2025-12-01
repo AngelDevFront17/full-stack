@@ -38,3 +38,8 @@ idade: 45,
 endereco: "Rua Central, 999"
 }
 ];
+
+//
+app.get("/cadastros", (req, res) => {
+    res.send(cadastros)
+})
