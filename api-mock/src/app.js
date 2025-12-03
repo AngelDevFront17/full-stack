@@ -39,7 +39,54 @@ endereco: "Rua Central, 999"
 }
 ];
 
-//
+function cadastroPorId(id){
+    return cadastros.filter((cadastro) => cadastro.id == id)
+}
+
+function buscarCadastroId(id){
+    return cadastros.findIndex((cadastro) => cadastro.id == id)
+}
+
+//altorizando atualização
+app.use(express.json())
+
+
+//Lista de cadastros
 app.get("/cadastros", (req, res) => {
     res.send(cadastros)
+})
+
+//Encontrar cadastro por Id
+app.get("/cadastros/:id", (req, res) => {
+    let index = req.params.id;
+
+    res.json(cadastroPorId(index))
+})
+
+//Post para cadastrar mais uma pessoa
+app.post("/cadastros", (req, res) => {
+    cadastros.push(req.body);
+
+    res.status(201).send(`Cadastro realizado com sucesso!`)
+})
+
+//Alterando por Id
+app.put("/cadastros/:id", (req, res) => {
+    let index = buscarCadastroId(req.params.id);
+    cadastros[index].nome = req.body.nome;
+    cadastros[index].telefone = req.body.telefone;
+    cadastros[index].cpf = req.body.cpf;
+    cadastros[index].email = req.body.email;
+    cadastros[index].idade = req.body.idade;
+    cadastros[index].endereco = req.body.endereco;
+
+    res.json(cadastros);
+})
+
+//Rota excluir
+app.delete("/cadastros/:id", (req, res) => {
+    let index = buscarCadastroId(req.params.id)
+    cadastros.splice(index, 1);
+    
+    res.send(`Cadastro ${req.params.id} excluido com sucesso!`)
 })
