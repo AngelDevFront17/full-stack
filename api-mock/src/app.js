@@ -89,4 +89,9 @@ app.delete("/cadastros/:id", (req, res) => {
     cadastros.splice(index, 1);
     
     res.send(`Cadastro ${req.params.id} excluido com sucesso!`)
+<<<<<<< HEAD
 })
+=======
+})
+
+>>>>>>> 89e3467ad766a3fb1ba1fc956cc741840aab492e
